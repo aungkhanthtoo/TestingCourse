@@ -9,6 +9,6 @@ data class ScheduledVideoCall(
     val time: LocalDateTime,
 ) {
     fun isExpired(): Boolean {
-        return time.isBefore(LocalDateTime.now())
+        return time.isBefore(TimeProvider.now())
     }
 }
